@@ -6,13 +6,10 @@ https://github.com/wwce/terraform/tree/master/gcp/adv_peering_2fw_2spoke
 
 This template will create an additional pair of FW behind an internal load balancer that can be used for outbound loadbalancing of TCP (only) traffic to provide redundancy of outbound connectivity. Prior to deployment, the original variables.tf file will need to be modified to include a boolean flag to indicate that the ILB should be deployed:
 
-#************************************************************************************
-# ILBNH
-#************************************************************************************
 variable "enable_ilbnh" {
   description = "If set to true, enable ILB as Next Hop"
   default     = true
-}
+  }
 
 ILB as next hop is not currently GA. Consequently, routes will need to be modified post-deployment with the following gcloud CLI command:
 
