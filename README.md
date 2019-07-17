@@ -17,7 +17,7 @@ gcloud beta compute routes create default-ilbnh \\ \
 --network=trust-vpc \\ \
 --destination-range=0.0.0.0/0 \\ \
 --next-hop-ilb=ilbnh-all  \\ \
---next-hop-ilb-region=us-central1 \\ \
+--next-hop-ilb-region=\<GCP REGION\> \\ \
 --priority=99
 
 N.B. - This template was developed/tested using Terraform 0.11.
